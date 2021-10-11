@@ -1,0 +1,89 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://scenes/bottom_field.tscn" type="PackedScene" id=1]
+[ext_resource path="res://sprites/Background 1 Assets/Hexa_Slot_Background_1.png" type="Texture" id=2]
+[ext_resource path="res://scripts/controller.gd" type="Script" id=3]
+[ext_resource path="res://sprites/CColor_Hexa/CLightBlue_Hexa.png" type="Texture" id=4]
+[ext_resource path="res://sprites/CColor_Hexa/CRed_Hexa.png" type="Texture" id=5]
+[ext_resource path="res://sprites/CColor_Hexa/CPink_Hexa.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Background 1 Assets/Hexa_Location_Background_1.png" type="Texture" id=7]
+[ext_resource path="res://sprites/CColor_Hexa/CGreen_Hexa.png" type="Texture" id=8]
+[ext_resource path="res://sprites/Background 1 Assets/Background1_fading_element_Light3.png" type="Texture" id=9]
+[ext_resource path="res://scenes/shape.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/upper_field.tscn" type="PackedScene" id=11]
+[ext_resource path="res://sprites/CColor_Hexa/CYellow__Hexa.png" type="Texture" id=12]
+[ext_resource path="res://sprites/CColor_Hexa/CTurquoise_Hexa.png" type="Texture" id=13]
+[ext_resource path="res://sprites/Background 1 Assets/Hexa_Slot_1.png" type="Texture" id=14]
+[ext_resource path="res://sprites/CColor_Hexa/COrange_Hexa.png" type="Texture" id=15]
+[ext_resource path="res://sprites/CColor_Hexa/CViolet_Hexa.png" type="Texture" id=16]
+[ext_resource path="res://sprites/Background 2 Assets/Hexa_Slot_2.png" type="Texture" id=17]
+[ext_resource path="res://scenes/theme_bg.tscn" type="PackedScene" id=18]
+[ext_resource path="res://sprites/Background 2 Assets/Background2_fading_element.png" type="Texture" id=19]
+[ext_resource path="res://sprites/Background 3 Assets/Background3_fading_element1.png" type="Texture" id=20]
+[ext_resource path="res://sprites/Background 3 Assets/HexaPiecesTab_3.png" type="Texture" id=21]
+[ext_resource path="res://sprites/Background 2 Assets/HexaPiecesTab_2.png" type="Texture" id=22]
+[ext_resource path="res://sprites/Background 2 Assets/Hexa_Slot_Background_2.png" type="Texture" id=23]
+[ext_resource path="res://sprites/Background 4 Assets/HexaPiecesTab_4.png" type="Texture" id=24]
+[ext_resource path="res://sprites/Background 3 Assets/Background3_fading_element4.png" type="Texture" id=25]
+[ext_resource path="res://sprites/Background 1 Assets/BackgroundBase_1.2.png" type="Texture" id=26]
+[ext_resource path="res://sprites/Background 3 Assets/BackgroundBase_3.png" type="Texture" id=27]
+[ext_resource path="res://sprites/Background 4 Assets/Hexa_Location_Background_4.png" type="Texture" id=28]
+[ext_resource path="res://sprites/Background 4 Assets/BackgroundBase_4.png" type="Texture" id=29]
+[ext_resource path="res://sprites/Background 4 Assets/Background4_fading_element1.png" type="Texture" id=30]
+[ext_resource path="res://sprites/Background 2 Assets/BackgroundBase_2.png" type="Texture" id=31]
+[ext_resource path="res://sprites/Background 1 Assets/Background1_fading_element_Light2.png" type="Texture" id=32]
+[ext_resource path="res://sprites/Background 4 Assets/Background4_fading_element3.png" type="Texture" id=33]
+[ext_resource path="res://sprites/Background 4 Assets/Background4_fading_element4.png" type="Texture" id=34]
+[ext_resource path="res://sprites/Background 4 Assets/Background4_fading_element2.png" type="Texture" id=35]
+[ext_resource path="res://sprites/Background 1 Assets/HexaPiecesTab_1.png" type="Texture" id=36]
+[ext_resource path="res://sprites/Background 1 Assets/Background1_fading_element_Light1.png" type="Texture" id=37]
+[ext_resource path="res://sprites/Background 3 Assets/Background3_fading_element3.png" type="Texture" id=38]
+[ext_resource path="res://sprites/Background 3 Assets/Hexa_Slot_Background_3.png" type="Texture" id=39]
+[ext_resource path="res://sprites/Background 3 Assets/Background3_fading_element2.png" type="Texture" id=40]
+[ext_resource path="res://sprites/Background 4 Assets/Hexa_Slot_4.png" type="Texture" id=41]
+[ext_resource path="res://sprites/Background 3 Assets/Hexa_Slot_3.png" type="Texture" id=42]
+[ext_resource path="res://sprites/Background 2 Assets/Hexa_Location_Background_2.png" type="Texture" id=43]
+[ext_resource path="res://sprites/Background 3 Assets/Hexa_Location_Background_3.png" type="Texture" id=44]
+[ext_resource path="res://sprites/Background 4 Assets/Hexa_Slot_Background_4.png" type="Texture" id=45]
+[ext_resource path="res://scenes/win_screen.tscn" type="PackedScene" id=46]
+[ext_resource path="res://animations/end_fade_out.anim" type="Animation" id=47]
+[ext_resource path="res://scenes/tutorial_screen.tscn" type="PackedScene" id=48]
+[ext_resource path="res://scenes/game_ui.tscn" type="PackedScene" id=49]
+
+[node name="level" type="Node2D"]
+script = ExtResource( 3 )
+max_width_up = 9
+max_height_up = 6
+max_width_down = 17
+max_height_down = 6
+hexa_original_width = 370.0
+row_play_space = [ 0.08, 0.5 ]
+col_play_space = [ 0.05, 0.95 ]
+row_play_space_bottom = [ 0.5, 0.85 ]
+col_play_space_bottom = [ 0.05, 0.95 ]
+hexagon_textures = [ ExtResource( 8 ), ExtResource( 4 ), ExtResource( 15 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 16 ), ExtResource( 12 ) ]
+pkg_upper_field = ExtResource( 11 )
+pkg_bottom_field = ExtResource( 1 )
+pkg_shape = ExtResource( 10 )
+pkg_tutorial_screen = ExtResource( 48 )
+bg_main_elements = [ [ ExtResource( 26 ), ExtResource( 36 ) ], [ ExtResource( 31 ), ExtResource( 22 ) ], [ ExtResource( 27 ), ExtResource( 21 ) ], [ ExtResource( 29 ), ExtResource( 24 ) ] ]
+bg_fading_elements = [ [ ExtResource( 37 ), ExtResource( 32 ), ExtResource( 9 ), ExtResource( 37 ), ExtResource( 32 ), ExtResource( 9 ) ], [ ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ), ExtResource( 19 ) ], [ ExtResource( 20 ), ExtResource( 40 ), ExtResource( 38 ), ExtResource( 25 ), ExtResource( 38 ) ], [ ExtResource( 30 ), ExtResource( 35 ), ExtResource( 33 ), ExtResource( 34 ) ] ]
+bg_hexa_slot_bg_loc = [ [ ExtResource( 14 ), ExtResource( 2 ), ExtResource( 7 ) ], [ ExtResource( 17 ), ExtResource( 23 ), ExtResource( 43 ) ], [ ExtResource( 42 ), ExtResource( 39 ), ExtResource( 44 ) ], [ ExtResource( 41 ), ExtResource( 45 ), ExtResource( 28 ) ] ]
+
+[node name="win_screen" parent="." instance=ExtResource( 46 )]
+layer = 2
+
+[node name="game_ui" parent="." instance=ExtResource( 49 )]
+
+[node name="theme_bg" parent="." instance=ExtResource( 18 )]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="upper_fields" type="Node2D" parent="."]
+
+[node name="bottom_fields" type="Node2D" parent="."]
+
+[node name="shapes" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/end_fade_out = ExtResource( 47 )

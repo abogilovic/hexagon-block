@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scripts/fading_element.gd" type="Script" id=2]
+[ext_resource path="res://animations/fading_element.anim" type="Animation" id=3]
+
+[node name="fading_element" type="TextureRect"]
+modulate = Color( 1, 1, 1, 0.0666487 )
+margin_right = 468.0
+margin_bottom = 398.0
+mouse_filter = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/fade_in_out = ExtResource( 3 )

@@ -1,0 +1,75 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/UI/Montserrat-ExtraBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/tutorial_screen.gd" type="Script" id=3]
+[ext_resource path="res://sprites/UI/hand@3x.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 90
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "tutorial_hand"
+length = 1.1
+loop = true
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 1200 ), Vector2( 0, 1200 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.8, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[node name="tutorial_screen" type="CanvasLayer"]
+layer = -1
+script = ExtResource( 3 )
+
+[node name="tutorial_text" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -447.0
+margin_top = -264.0
+margin_right = 447.0
+margin_bottom = 138.0
+custom_fonts/font = SubResource( 1 )
+text = "Move block to 
+fill up the board"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hand_canvas" type="CanvasLayer" parent="."]
+
+[node name="hand_texture" type="TextureRect" parent="hand_canvas"]
+margin_right = 204.0
+margin_bottom = 210.0
+mouse_filter = 2
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="hand_canvas/hand_texture"]
+anims/tutorial_hand = SubResource( 2 )

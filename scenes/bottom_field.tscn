@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprites/Background 1 Assets/Hexa_Location_Background_1.png" type="Texture" id=1]
+
+[node name="bottom_field" type="Sprite"]
+modulate = Color( 1, 1, 1, 0.745098 )
+texture = ExtResource( 1 )
